@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Djreddit</title>
+    <title>DJ_Reddit</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,16 @@
   </head>
 
   <body>
+
+  <ul>
+     <li><%= link_to 'Submit post', new_post_path %></li>
+     <li><%= link_to 'Account', new_post_path %></li>
+     <li><%= link_to 'Sign out', new_post_path %></li>
+
+     <li><%= link_to 'Sign up', new_post_path  %></li>
+     <li><%= link_to 'Sign in', new_post_path %></li>
+    </ul>
+    
     <%= yield %>
   </body>
 </html>
