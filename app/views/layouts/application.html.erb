@@ -4,14 +4,14 @@
     <title>DJ_Reddit</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag "main.css" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <%= image_tag("dj_logo.png", size: "80x80", :alt => "logo") %>
-  <ul>
+  <a href ="/"> <%= image_tag("dj_logo.png", :id => "logo" , :alt => "Digital Jersey logo") %>
+    <ul>
      <li><%= link_to 'Submit post', new_post_path %></li>
      <li><%= link_to 'Account', new_post_path %></li>
      <li><%= link_to 'Sign out', new_post_path %></li>
@@ -19,6 +19,29 @@
      <li><%= link_to 'Sign up', new_post_path  %></li>
      <li><%= link_to 'Sign in', new_post_path %></li>
     </ul>
+
+    <div class="article">
+          <ul class="links">
+            <li>
+              <a href="https://basecamp.com/" target="_blank">
+                <%= image_tag("basecamp-logo.png", :alt => "link to basecamp website") %>
+                <p>We use basecamp as a reference tool throughout the course. It contains the entire course curriculum as well as a calendar with all the key dates.</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://teamtreehouse.com/" target="_blank">
+                <%= image_tag("treehouse-logo.png", :alt => "link to treehouse website") %>
+                <p>We use Treehouse as a tool to learn in our own time - Treehouse has a range of video courses, quizzes and code challenges we use to supplement the sessions.</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://slack.com/intl/en-je/" target="_blank">
+                <%= image_tag("slack-logo.png", :alt => "link to a slack website") %>
+                <p>We use Slack as a tool to communicate with each other. Slack is where we go to ask for help, speak to the mentors or organise meet-ups with other students.</p>
+              </a>
+            </li>
+          </ul>
+        </div>
     
     <%= yield %>
   </body>

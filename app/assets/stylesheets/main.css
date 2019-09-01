@@ -1,0 +1,71 @@
+/************************
+PAGE: LINKS
+*************************/
+h1 {
+  color: #7a5b9a;
+  font-size: 3em;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  display: inline-block;
+}
+
+a:hover {
+  color: #ccc;
+}
+
+#logo {
+  object-fit: contain;
+  height: auto;
+  width: 100px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 2%; 
+  padding: 0;
+  list-style: none;
+  border-spacing: 2.5em;
+}
+
+
+.links li {
+  margin: 1%;
+  box-sizing: border-box;
+  object-fit: contain;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 240px;
+  background-color: #eee;
+  border-style: solid;
+  border-color: #ccc;
+}
+
+
+.links li a p {
+  padding: 5%;
+  text-align: center;
+  font-size: 1.4em;
+  color: black;
+}
+
+
+.links li img {
+  display: block;
+  object-fit: contain;
+  max-width: auto;
+  max-height: 100px;
+  margin-top: 15%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.links li:hover {
+	background-color: #ccc;
+}
