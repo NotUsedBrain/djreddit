@@ -1,25 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/posts">DJ Reddit</a>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Sign Up <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Log In <span class="sr-only">(current)</span></a>
+      </li>
+      <li>
+        <%= link_to 'New Post', new_post_path, :class=> 'nav-link' %>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Welcome to DJ Reddit</h1>
+    <p class="lead"></p>
+  </div>
+</div>
+
+<h1>Posts</h1>
 
   <tbody>
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div>
+        <h3><%= post.title %></h3>
+        <p><%= post.content %></p>
+        <p><%= link_to 'Show', post, :class=> 'btn btn-outline-primary' %></p>
+        <p><%= link_to 'Edit', edit_post_path(post), :class=> 'btn btn-outline-primary' %></p>
+        <p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class=> 'btn btn-outline-danger' %></p>
+      </div>
     <% end %>
   </tbody>
 </table>
