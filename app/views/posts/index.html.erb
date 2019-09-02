@@ -31,7 +31,6 @@
 
 <h1>Posts</h1>
 
-  <tbody>
     <% @posts.each do |post| %>
       <div>
         <h3><%= post.title %></h3>
@@ -41,8 +40,6 @@
         <p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class=> 'btn btn-outline-danger' %></p>
       </div>
     <% end %>
-  </tbody>
-</table>
 
 <br>
 
