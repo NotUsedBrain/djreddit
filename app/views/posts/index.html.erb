@@ -11,7 +11,7 @@
       <br>
       <a><%= link_to 'Edit', edit_post_path(post) %> </a>
       <a><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> </a>
-      <h3><a><%= post.comments.count %> <%= link_to 'Comments', post_path(post) %> </a></h3>
+      <h3> <%= link_to pluralize(post.comments.count, 'Comment'), post_path(post) %> </h3>
     <% end %>
   
 
