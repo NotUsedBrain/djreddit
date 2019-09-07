@@ -4,7 +4,10 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :community do
+  resources :communities do
+  get '/communities/new', to: 'communities#new'
+  get '/communities/:id', to: 'communities#show'
+
   end
   
   root to: 'posts#index'
